@@ -120,31 +120,113 @@ public class Principal1 {
         System.out.println();
 
         Libro.cabecera();
-        for(int i=0; i<libros_al.size(); i++) {
+        for (int i = 0; i < libros_al.size(); i++) {
             Libro libro = libros_al.get(i);
             String titulo = libro.getTitulo();
-            String[] c = titulo.split(" ");
-            String er = "(Java\\s[0-9]*)";
-            for(int j=0; j<c.length; j++) {
-                if(c[j].toLowerCase().trim().equalsIgnoreCase("java")) {
-                   libro.imprimir();
-                   break;
+            String[] c = titulo.split(" ");//Introducción A Java8
+            String er = "java";
+            String er1 = "[0-9]+";//9,28,111,1234,8
+            for (int j = 0; j < c.length; j++) {
+                String sf = c[j].replaceAll(er1, "").trim().toLowerCase();
+                if (sf.equalsIgnoreCase("c#")) {
+                    libro.imprimir();
+                    break;
                 }
             }
         }
-        
-        String str = "Introducción A Java8";
-        String c = "Java 8999";
-        boolean correcto = c.matches("(Java)(\\s||[0-9]+)");
-        System.out.println(correcto);
-        
-        
-        /*
-        String str = "Introducción Java";
-        String subStr = "Java";
-        boolean containsStr = str.contains(subStr);
-        System.out.println(containsStr);
-        */
+
+        System.out.println();
+        System.out.println("5. MOSTRAR TODOS LOS LIBROS DE C#");
+        System.out.println("=================================");
+        System.out.println();
+
+        int k = 1;
+        boolean bandera = false;
+        for (int i = 0; i < libros_al.size(); i++) {
+            Libro libro = libros_al.get(i);
+            String titulo = libro.getTitulo();
+            String[] c = titulo.split(" ");//Introducción A Java8
+            String er = "java";
+            String er1 = "[0-9]+";//9,28,111,1234,8
+            for (int j = 0; j < c.length; j++) {
+                String sf = c[j].replaceAll(er1, "").trim().toLowerCase();
+                if (sf.equalsIgnoreCase("c#")) {
+                    bandera = true;
+                    if (k == 1) {
+                        Libro.cabecera();
+                        k++;
+                    }
+                    libro.imprimir();
+                    break;
+                }
+            }
+        }
+        if (bandera == false) {
+            System.out.println("NO EXISTE LIBROS DE C#");
+        }
+
+        System.out.println();
+        System.out.println("6. RECOMENDAR LIBROS RELACIONADOS A JAVA");
+        System.out.println("========================================");
+        System.out.println();
+
+        int k1 = 1;
+        boolean bandera1 = false;
+        for (int i = 0; i < libros_al.size(); i++) {
+            Libro libro = libros_al.get(i);
+            String titulo = libro.getTitulo();
+            String[] c = titulo.split(" ");//Introducción A Java8
+            String er1 = "[0-9]+";//9,28,111,1234,8
+            for (int j = 0; j < c.length; j++) {
+                String sf = c[j].replaceAll(er1, "").trim().toLowerCase();
+                if (sf.equalsIgnoreCase("java")) {
+                    bandera1 = true;
+                    if (k1 == 1) {
+                        Libro.cabecera();
+                        k1++;
+                    }
+                    libro.imprimir();
+                    break;
+                }
+            }
+        }
+        if (bandera == true) {
+            System.out.println("TE RECOMENDAMOS LIBROS RELACIONADOS A JAVA");
+            System.out.println("==========================================");
+            Libro.cabecera();
+            for (int i = 0; i < libros_al.size(); i++) {
+                Libro libro = libros_al.get(i);
+                String titulo = libro.getTitulo().trim().toLowerCase();
+                String subcadena = "javascript";
+                boolean x = titulo.contains(subcadena);
+                if (x == true) {
+                    libro.imprimir();
+                }
+            }
+        }
+
+        System.out.println();
+        System.out.println("7. CREAR UN ARCHIVO RESUMEN.CSV TODOS LOS LIBROS PROGRAMACION");
+        System.out.println("=============================================================");
+        System.out.println();
+
+        boolean bandera7 = false;
+        for (int i = 0; i < libros_al.size(); i++) {
+            Libro libro = libros_al.get(i);
+            if (libro.getDescripcion().equalsIgnoreCase("Programación")) {
+                libro.escribirArchivoCsv();
+                bandera7 = true;
+            }
+        }
+        if(bandera == false) {
+            System.out.println("NO EXISTEN LIBROS DE PROGRAMACION PARA ESCRIBIR ARCHIVO CSV");
+        }else {
+            System.out.println("OK ESCRITURA");
+        }
 
     }
 }
+/*
+c[0] = Tutorial
+c[1] = Java9
+ */

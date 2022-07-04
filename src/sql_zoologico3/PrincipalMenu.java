@@ -9,24 +9,18 @@ public class PrincipalMenu {
         do {
             Opcion.cls();
             System.out.println("MENU");
-            System.out.println("1. Insertar registro alumno");
-            System.out.println("2. Buscar registro alumno por su nombre");
-            System.out.println("3. Buscar registro alumno por su identifiador");
-            System.out.println("4. Eliminar registro alumno por su identificador");
-            System.out.println("5. Actualizar registro alumno en todos sus datos");
-            System.out.println("6. QUE ANIMALES HAY EN UNA CIUDAD");
-            System.out.println("7. Mostrar todos los registros de la tabla alumno ordenados por el nombre");
-            System.out.println("8. Mostrar todos los registros de la tabla alumno ordenados por el nombre descendente");
-            System.out.println("9. Salir");
+            System.out.println("1. Qué animales hay en una ciudad");
+            System.out.println("2. Crear un archivo csv que contenga todos los registros de la tabla Zoologico");
+            System.out.println("0. Salir");
 
             int opcion = Entrada.entradaNumeroEntero("Ingrese Opción? ");
 
             switch (opcion) {
                 case 1:
-                    //Opcion.opcion1_1();
+                    Opcion.opcion1();
                     break;
                 case 2:
-                    //Opcion.opcion2_2();
+                    Opcion.opcion2();
                     break;
                 case 3:
                     //Opcion.opcion3();
@@ -38,7 +32,7 @@ public class PrincipalMenu {
                     //Opcion.opcion5();
                     break;
                 case 6:
-                    Opcion.opcion6();
+                    //Opcion.opcion6();
                     break;
                 case 7:
                     //Opcion.opcion6(2);
@@ -46,7 +40,7 @@ public class PrincipalMenu {
                 case 8:
                     //Opcion.opcion6(3);
                     break;
-                case 9:
+                case 0:
                     System.exit(0);
                     break;
             }

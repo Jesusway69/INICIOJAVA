@@ -1,5 +1,9 @@
 package autor_libro;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+
 public class Libro {
 
     private int idLibro;
@@ -70,7 +74,22 @@ public class Libro {
     }
 
     public void imprimir() {
-        System.out.printf("%8d  %-25s%-15s%8d%8d\n", idLibro, titulo, descripcion, nroPaginas, idAutor);
+        System.out.printf("%-8d  %-25s%-15s%8d%8d\n", idLibro, titulo, descripcion, nroPaginas, idAutor);
+    }
+
+    public void escribirArchivoCsv() {
+        File f;
+        FileWriter fw;
+        BufferedWriter bw;
+        try {
+            f = new File("datos/resumen.csv");
+            fw = new FileWriter(f, true);
+            bw = new BufferedWriter(fw);
+            bw.write(idLibro+";"+titulo+";"+descripcion+";"+nroPaginas+";"+idAutor+"\n");
+            bw.flush();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }

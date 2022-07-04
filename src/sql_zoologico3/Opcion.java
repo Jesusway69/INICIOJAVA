@@ -4,19 +4,26 @@ import java.io.IOException;
 import java.sql.Connection;
 
 public class Opcion {
-    
-    public static void opcion6() {
+
+    public static void opcion1() {
         cls();
         System.out.println("6. QUE ANIMALES HAY EN UNA CIUDAD");
         System.out.println("=================================");
         Connection conexion = OperacionesCrud.miconexion();
-        if(conexion != null) {
+        if (conexion != null) {
             OperacionesCrud.mostrar(conexion);
-        }else {
+        } else {
             System.out.println("ERROR: CONEXION");
         }
         pause();
     }
+
+    public static void opcion2() {
+        
+    }
+
+
+    
 
     public static void pause() {
         try {

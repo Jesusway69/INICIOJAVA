@@ -17,8 +17,7 @@ public class ER3 {
             if (correcto == false) {
                 System.out.println("Cadena no valido");
             }
-        } while (correcto == false); 
+        } while (correcto == false);
 
     }
-
 }

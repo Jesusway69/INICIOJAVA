@@ -5,30 +5,10 @@ import java.util.Scanner;
 public class Probando {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in, "ISO-8859-1");//UTF-8
-        String scadena;
-        String erl = "[a-zA-ZñÑ]|[áéíóúÁÉÍÓÚÄÜ]"; //Todas las letras
-        String erv = "[aeiouAEIOUáéíóúÁÉÍÓÚ]";
-        
-        do {
-             System.out.print("Ingrese cadena?");
-             String letra = sc.next();
-             //String letra = cadena.charAt(0)+"";
-             if(letra.matches(erl)) {
-                System.out.println("SI");
-             }else {
-                System.out.println("NO");
-             }
-            
-        }while(true);
-        
-        
-        
-        
-        
-        
-        
-        
+        String si = "En españa se aprecia modernidad, pero españa también es segura";
+        String er = "españa";
+        String sf = si.replaceAll(er, "España");
+        System.out.println("Antes   : " + si);
+        System.out.println("Después : " + sf);
     }
-
 }
