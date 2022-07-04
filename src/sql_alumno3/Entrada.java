@@ -20,6 +20,14 @@ public class Entrada {
         return sCadena;
     }
 
+    public static String entradaRutaNombreArchivo(String mensaje) {
+        Scanner sc = new Scanner(System.in);
+        String sCadena;
+        System.out.print(mensaje);
+        sCadena = sc.nextLine();
+        return sCadena;
+    }
+
     public static int entradaNumeroEntero(String mensaje) {
         Scanner sc = new Scanner(System.in);
         String er = "[0-9]+";

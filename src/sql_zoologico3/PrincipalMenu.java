@@ -10,7 +10,8 @@ public class PrincipalMenu {
             Opcion.cls();
             System.out.println("MENU");
             System.out.println("1. Qué animales hay en una ciudad");
-            System.out.println("2. Crear un archivo csv que contenga todos los registros de la tabla Zoologico");
+            System.out.println("2. Crear un archivo zoologico.csv que contenga todos los registros de la tabla Zoologico");
+            System.out.println("3. Borrar el archivo zoologico.csv");
             System.out.println("0. Salir");
 
             int opcion = Entrada.entradaNumeroEntero("Ingrese Opción? ");
@@ -23,7 +24,7 @@ public class PrincipalMenu {
                     Opcion.opcion2();
                     break;
                 case 3:
-                    //Opcion.opcion3();
+                    Opcion.opcion3();
                     break;
                 case 4:
                     //Opcion.opcion4();
