@@ -3,7 +3,33 @@ package ejercicios;
 import java.util.*;
 
 public class MisEjercicios {
+    
+    public static void ejercicio11_1() {
+        //ENTRADA
+        double a = Entrada.entradaNumeroReal("Ingrese longitud cateto 1? ");
+        double b = Entrada.entradaNumeroReal("Ingrese longitud cateto 2? ");
+        //PROCESO
+        double c = Math.sqrt(Math.pow(a,2)+Math.pow(b,2));
+        //double c =   Math.pow((Math.pow(a,2)+Math.pow(b,2)),0.5);
+        //SALIDA
+        System.out.println("Hipotenusa: " + ((int)(c*100))/100.0);
+        System.out.printf("Hipotenusa: %-1.3f", c);
+    }
 
+    /*
+    public static void ejercicio11_2() { //hayar la hipotenusa y mostrarle el resultado de sumarle 10
+        Ejercicio11_2 objeto = new Ejercicio11_2(Entrada.entradaNumeroReal("Ingrese longitud cateto 1? "),
+                                                 Entrada.entradaNumeroReal("Ingrese longitud cateto 2? "));
+        
+        double x = objeto.hipotenusa() + 10;
+        
+        
+        System.out.println("Hipotenusa: " + objeto.hipotenusa());
+        //objeto.mostrar();
+        //objeto.motrarTodo();
+    }
+    
+*/
     public static void ejercicio12_1() {
         List<Ejercicio12_1> objetos_al = new ArrayList<Ejercicio12_1>();
         //ENTRADA

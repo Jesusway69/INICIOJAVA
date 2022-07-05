@@ -14,7 +14,11 @@ public class Principal {
        x1 = new HashSet<Ejercicio15_2>();
        x1 = new LinkedHashSet<Ejercicio15_2>();
         */
-       MisEjercicios.ejercicio12_1();
+        Ejercicio11_2 objeto = new Ejercicio11_2(Entrada.entradaNumeroReal("Ingrese longitud cateto 1? "),
+                                                 Entrada.entradaNumeroReal("Ingrese longitud cateto 2? "));
+        
+        System.out.println("Hipotenusa: " + objeto.hipotenusa());
+      
     }
 
 }
