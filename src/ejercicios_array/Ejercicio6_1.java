@@ -12,10 +12,10 @@ public class Ejercicio6_1 {
        //LLENAR
        for(int i=0; i<cantidadCalles; i++) {
            calle[i] = Entrada.entradaCadena("Ingrese nombre calle? ");
-           portal[i] = Entrada.entradaNumeroEntero("Ingrse cantidad portales? ");
+           portal[i] = Entrada.entradaNumeroEntero("Ingrese cantidad portales de la calle " + calle[i] + ":");
            matrizCantidadPortales[i] = new int[portal[i]];
            for(int j=0; j<portal[i]; j++) {
-               matrizCantidadPortales[i][j] = Entrada.entradaNumeroEntero("Ingrese cantidad habitantes del portal? ");
+               matrizCantidadPortales[i][j] = Entrada.entradaNumeroEntero("Ingrese cantidad habitantes del portal " + (i+1) + ":");
            }
        }
        //MOSTRAR
@@ -23,6 +23,7 @@ public class Ejercicio6_1 {
            System.out.print(calle[i] + "  " + portal[i] + "  "  );
            for(int j=0; j<portal[i]; j++) {
                System.out.print(matrizCantidadPortales[i][j] + ",");
+                       
            }
            System.out.println();
        }

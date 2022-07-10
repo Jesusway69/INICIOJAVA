@@ -13,7 +13,7 @@ public class Ejercicio6_2 {
         
         for(int i=0; i<cantidadCalles; i++) {
            String calle = Entrada.entradaCadena("Ingrese nombre calle? ");
-           int portales = Entrada.entradaNumeroEntero("Ingrse cantidad portales? ");
+           int portales = Entrada.entradaNumeroEntero("Ingrese cantidad portales? ");
            for(int j=0; j<portales; j++) {
                matrizCantidadPortales[i][j] = Entrada.entradaNumeroEntero("Ingrese cantidad habitantes del portal? ");
            }
